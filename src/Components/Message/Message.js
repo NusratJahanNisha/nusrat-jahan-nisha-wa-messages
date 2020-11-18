@@ -13,8 +13,7 @@ const Message = () => {
     const onSubmit = data => {
         console.log(data);
         const newMessage = { ...data }
-        // http://localhost:8000/message
-        fetch("https://mysterious-fjord-21720.herokuapp.com/", {
+        fetch("https://mysterious-fjord-21720.herokuapp.com/message", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(newMessage)
